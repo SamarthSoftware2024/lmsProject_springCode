@@ -47,4 +47,18 @@ public class MyServiceImp implements Myservice{
 	    }
 	}
 
+
+	   public String login(String userName, String password) {
+	        Optional<Student> optionalStudent = repo.findByUserNameAndPassword(userName, password);
+
+	        if (optionalStudent.isPresent()) {
+	            // Student found
+	            Student student = optionalStudent.get();
+	            return "Login successful for student with ID: " + student.getId();
+	        } else {
+	            // Student not found
+	            return "Invalid username or password";
+	        }
+	    }
+
 }

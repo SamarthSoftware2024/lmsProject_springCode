@@ -10,6 +10,8 @@ public interface Myservice {
 	public String register(Student student);
 	
 	public String login(int id, Student student);
+
+	public String login(String userName, String password);
 	
 
 }
