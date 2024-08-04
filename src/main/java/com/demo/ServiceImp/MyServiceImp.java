@@ -52,11 +52,10 @@ public class MyServiceImp implements Myservice{
 	        Optional<Student> optionalStudent = repo.findByUserNameAndPassword(userName, password);
 
 	        if (optionalStudent.isPresent()) {
-	            // Student found
-	            Student student = optionalStudent.get();
-	            return "Login successful for student with ID: " + student.getId();
+//	            Student student = optionalStudent.get();
+//	            return "Login successful for student with ID: " + student.getId();
+	            return "login successfully";
 	        } else {
-	            // Student not found
 	            return "Invalid username or password";
 	        }
 	    }
